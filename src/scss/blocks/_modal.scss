@@ -1,0 +1,111 @@
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	background: rgba($color: #000, $alpha: 0);
+	visibility: hidden;
+	position: fixed;
+	z-index: 150;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.4s ease;
+	&._active {
+		background: rgba($color: #000, $alpha: 0.5);
+		visibility: visible;
+		transition: all 0.4s ease;
+	}
+}
+
+.modal {
+	width: 33rem;
+	min-height: 23rem;
+	position: absolute;
+	transform: scale(0);
+	z-index: 155;
+	background: #fff;
+	border-radius: 0.6rem;
+	overflow: hidden;
+	padding: 2rem 1.5rem 1.5rem;
+	transition: all 0.4s ease;
+	&._active {
+		transform: scale(1);
+		transition: all 0.6s ease;
+	}
+	svg[data-icon="close-modal"] {
+		width: 1.2rem;
+		position: absolute;
+		top: 2rem;
+		right: 1.5rem;
+		fill: #000;
+		cursor: pointer;
+	}
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #5e5e5e;
+		font-size: 1.5rem;
+		margin: 0rem 0rem 1.2rem 0rem;
+	}
+	&__form {
+		& > input,
+		& > button {
+			display: block;
+			width: 100%;
+			height: 3rem;
+			font-size: 1rem;
+			padding: 0rem 0.7rem;
+			margin: 0rem 0rem 1rem 0rem;
+			border-radius: 0.2rem;
+			border: 1px solid #939393;
+			color: #333;
+			&::placeholder {
+				color: #939393;
+			}
+		}
+		& > input {
+			text-transform: lowercase;
+		}
+		& > button {
+			background: $mainColor;
+			color: $textColor;
+			border: none;
+			text-transform: capitalize;
+			font-weight: 700;
+			font-size: 1.1rem;
+		}
+	}
+	&__support {
+		text-transform: capitalize;
+	}
+}
+
+.form-modal {
+	&__checkbox {
+		text-transform: capitalize;
+		display: flex;
+		align-items: center;
+		margin: 0rem 0rem 1.5rem 0rem;
+		& > input {
+			margin: 0rem 0.2rem 0rem 0rem;
+			cursor: pointer;
+		}
+		& > label {
+			cursor: pointer;
+			font-size: #333;
+		}
+	}
+}
+
+.support-modal {
+	color: #7e7e7e;
+	&__password {
+		margin: 0rem 0rem 0.7rem 0rem;
+	}
+	a {
+		color: #ffbf00;
+		font-weight: 600;
+	}
+}
