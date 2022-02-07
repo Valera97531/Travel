@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerSearchBar.classList.toggle('_active');
 		headerSearchIcon.classList.toggle('_none');
 		headerSearchClose.classList.toggle('_active');
+		headerBurger.classList.remove('_active');
+		headerMenu.classList.remove('_active');
 	});
 
 	const headerUser = document.querySelector('.header__user'),
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerUser.addEventListener('click', () => {
 		overlay.classList.toggle('_active');
 		modal.classList.toggle('_active');
+		headerBurger.classList.remove('_active');
+		headerMenu.classList.remove('_active');
 	});
 
 	const closeModal = document.querySelector('[data-icon="close-modal"]');
@@ -35,6 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerBurger.addEventListener('click', () => {
 		headerBurger.classList.toggle('_active');
 		headerMenu.classList.toggle('_active');
+	});
+
+	const headerLink = document.querySelectorAll('.header__link');
+
+	headerLink.forEach(item => {
+		item.addEventListener('click', () => {
+			headerBurger.classList.remove('_active');
+			headerMenu.classList.remove('_active');
+		});
+	});
+
+	const videoBtn = document.querySelectorAll('.promo__inner span');
+
+	videoBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			document.querySelector('.promo__inner span._active').classList.remove('_active');
+			btn.classList.add('_active');
+			let src = btn.getAttribute('data-src');
+			document.querySelector('.promo__video video').src = src;
+		});
 	});
 
 });

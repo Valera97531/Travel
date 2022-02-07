@@ -29,6 +29,13 @@
 	overflow: hidden;
 	padding: 2rem 1.5rem 1.5rem;
 	transition: all 0.4s ease;
+	@media (max-width: 630px) {
+		width: 90%;
+		min-height: 0;
+	}
+	@media (max-width: 480px) {
+		padding: 1.5rem 1rem;
+	}
 	&._active {
 		transform: scale(1);
 		transition: all 0.6s ease;
@@ -40,6 +47,9 @@
 		right: 1.5rem;
 		fill: #000;
 		cursor: pointer;
+		@media (max-width: 480px) {
+			top: 1.3rem;
+		}
 	}
 	&__title {
 		text-align: center;
@@ -48,6 +58,9 @@
 		color: #5e5e5e;
 		font-size: 1.5rem;
 		margin: 0rem 0rem 1.2rem 0rem;
+		@media (max-width: 480px) {
+			font-size: 1.3rem;
+		}
 	}
 	&__form {
 		& > input,
@@ -59,22 +72,31 @@
 			padding: 0rem 0.7rem;
 			margin: 0rem 0rem 1rem 0rem;
 			border-radius: 0.2rem;
-			border: 1px solid #939393;
 			color: #333;
 			&::placeholder {
 				color: #939393;
 			}
+			@media (max-width: 480px) {
+				height: 2rem;
+			}
 		}
 		& > input {
 			text-transform: lowercase;
+			border: 1px solid #939393;
+			&:focus {
+				box-shadow: 0 0 1rem 0 $mainColor;
+				border: none;
+			}
 		}
 		& > button {
 			background: $mainColor;
 			color: $textColor;
-			border: none;
 			text-transform: capitalize;
 			font-weight: 700;
 			font-size: 1.1rem;
+			@media (max-width: 480px) {
+				font-size: 1rem;
+			}
 		}
 	}
 	&__support {
@@ -88,24 +110,37 @@
 		display: flex;
 		align-items: center;
 		margin: 0rem 0rem 1.5rem 0rem;
+		@media (max-width: 360px) {
+			margin: 0rem 0rem 1rem 0rem;
+		}
 		& > input {
 			margin: 0rem 0.2rem 0rem 0rem;
 			cursor: pointer;
 		}
 		& > label {
 			cursor: pointer;
-			font-size: #333;
+			color: #333;
 		}
 	}
 }
 
 .support-modal {
 	color: #7e7e7e;
+	@media (max-width: 360px) {
+		font-size: 0.9rem;
+	}
 	&__password {
 		margin: 0rem 0rem 0.7rem 0rem;
 	}
 	a {
 		color: #ffbf00;
 		font-weight: 600;
+		transition: all 0.3s ease;
+		@media (min-width: $md3 + px) {
+			&:hover {
+				text-decoration: underline;
+				color: blue;
+			}
+		}
 	}
 }

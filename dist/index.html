@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Travel</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220207104530">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220207213945">
 </head>
 
 <body>
@@ -29,9 +29,6 @@
 <header class="header">
 
 	<div class="container">
-
-
-
 		<div class="header__row">
 			<div class="header__burger">
 				<span></span>
@@ -93,7 +90,54 @@
 
 
 			<div class="content">
-
+				<section class="promo">
+	<div class="promo__video">
+		<video src="img/vid-1.mp4" loop autoplay muted></video>
+	</div>
+	<div class="promo__wrapper">
+		<h1 class="promo__title">Adventure is worthwhile</h1>
+		<div class="promo__info">Dicover new places with us, adventure awaits</div>
+		<div>
+			<a href="#" class="promo__btn btn">Dicover more</a>
+		</div>
+		<div class="promo__inner">
+			<span class="inner-promo__btn _active" data-src="img/vid-1.mp4"></span>
+			<span data-src="img/vid-2.mp4"></span>
+			<span data-src="img/vid-3.mp4"></span>
+			<span data-src="img/vid-4.mp4"></span>
+			<span data-src="img/vid-5.mp4"></span>
+		</div>
+	</div>
+</section>
+				<section class="book">
+	<div class="container">
+		<h2 class="book__title title">
+			<span>B</span>
+			<span>o</span>
+			<span>o</span>
+			<span class="margin">k</span>
+			<span>n</span>
+			<span>o</span>
+			<span>w</span>
+		</h2>
+		<div class="book__wrapper">
+			<div class="book__img">
+				<img src="img/book-img.svg" alt="book">
+			</div>
+			<form action="#" class="book__form form-book">
+				<label for="places">Where to</label>
+				<input type="text" name="places" id="places" placeholder="search places" required>
+				<label for="number">How many</label>
+				<input type="number" name="number" id="number" placeholder="number of guests" required>
+				<label for="arrivals">Arrivals</label>
+				<input type="date" name="arrivals" id="arrivals" required>
+				<label for="leaving">Leaving</label>
+				<input type="date" name="leaving" id="leaving" required>
+				<button class="btn">Book now</button>
+			</form>
+		</div>
+	</div>
+</section>
 			</div>
 
 			<footer class="footer">
@@ -113,7 +157,7 @@
 		<form action="#" class="modal__form form-modal">
 			<input type="email" name="email" placeholder="enter your email" required>
 			<input type="password" name="password" placeholder="enter your password" required>
-			<button type="submit">Login now</button>
+			<button type="submit" class="btn">Login now</button>
 			<div class="form-modal__checkbox">
 				<input type="checkbox" id="checkbox-remember" name="checkbox-remember">
 				<label for="checkbox-remember">Remember me</label>
@@ -132,7 +176,7 @@
 
 	</div>
 
-	<script src="js/app.min.js?_v=20220207104530"></script>
+	<script src="js/app.min.js?_v=20220207213945"></script>
 </body>
 
 </html>

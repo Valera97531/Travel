@@ -1,0 +1,62 @@
+.book {
+	padding: 2.5rem 0rem 0rem 0rem;
+	&__title {
+		margin: 0rem 0rem 4.5rem 0rem;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+	}
+	&__img {
+		flex: 1 1 40rem;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__form {
+		flex: 1 1 40rem;
+	}
+}
+
+.form-book {
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	border-radius: 0.7rem;
+	label,
+	input,
+	button {
+		display: block;
+	}
+	input {
+		width: 100%;
+		height: 3rem;
+		font-size: 1rem;
+		padding: 0rem 0.7rem;
+		margin: 0rem 0rem 1.2rem 0rem;
+		border-radius: 0.2rem;
+		color: #333;
+		text-transform: lowercase;
+		border: 2px solid #e7e3e3;
+		&::placeholder {
+			color: #939393;
+		}
+		&:focus {
+			box-shadow: 0 0 1rem 0 $mainColor;
+			border: none;
+		}
+	}
+	label {
+		color: #737171;
+		font-weight: 700;
+		font-size: 1.2rem;
+		text-transform: capitalize;
+		margin: 0rem 0rem 0.6rem 0rem;
+	}
+	button {
+		padding: 0rem 2rem;
+		line-height: 2.5rem;
+		font-size: 1rem;
+	}
+}

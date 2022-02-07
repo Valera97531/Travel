@@ -1,0 +1,38 @@
+.btn {
+	background: $mainColor;
+	display: inline-block;
+	color: $textColor;
+	text-transform: capitalize;
+	font-weight: 700;
+	font-size: 1.1rem;
+	background: $mainColor;
+	border: 2px solid $mainColor;
+	transition: background 0.7s ease, color 0.7s ease;
+	@media (min-width: $md3 + px) {
+		&:hover {
+			background: rgba(241, 156, 6, 0.3);
+			color: $mainColor;
+		}
+	}
+}
+
+.title {
+	text-transform: uppercase;
+	color: $mainColor;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.5rem;
+	span {
+		background: rgba(241, 156, 6, 0.2);
+		display: inline-block;
+		border-radius: 0.3rem;
+		padding: 0rem 0.5rem;
+		line-height: 3rem;
+		&:not(:last-child) {
+			margin: 0rem -0.4rem 0rem 0rem;
+		}
+	}
+	.margin {
+		margin: 0rem 0.9rem 0rem 0rem !important;
+	}
+}

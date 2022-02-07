@@ -3,6 +3,8 @@
 @import "base/var";
 @import "base/ibg";
 
+@import "blocks/blocks";
+
 *::selection {
 	background: orange;
 	color: #fff;
@@ -32,6 +34,7 @@ body {
 
 .content {
 	flex: 1 0 100%;
+	padding: 4rem 0rem 0rem 0rem;
 }
 
 .container {
@@ -42,6 +45,8 @@ body {
 }
 
 @import "blocks/header";
+@import "blocks/promo";
+@import "blocks/book";
 
 @import "blocks/footer";
 @import "blocks/modal";
