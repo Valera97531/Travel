@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		modal.classList.toggle('_active');
 		headerBurger.classList.remove('_active');
 		headerMenu.classList.remove('_active');
+		headerSearchIcon.classList.remove('_none');
 	});
 
 	const closeModal = document.querySelector('[data-icon="close-modal"]');
@@ -39,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerBurger.addEventListener('click', () => {
 		headerBurger.classList.toggle('_active');
 		headerMenu.classList.toggle('_active');
+		headerSearchBar.classList.remove('_active');
+		headerSearchClose.classList.remove('_active');
+		headerSearchIcon.classList.remove('_none');
+
 	});
 
 	const headerLink = document.querySelectorAll('.header__link');

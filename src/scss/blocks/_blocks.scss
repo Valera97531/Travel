@@ -22,6 +22,18 @@
 	text-align: center;
 	font-weight: 700;
 	font-size: 2.5rem;
+	@media (max-width: 550px) {
+		font-size: 1.6rem;
+		span {
+			line-height: 2.2rem !important;
+		}
+	}
+	@media (min-width: 2000px) {
+		font-size: 4rem;
+		& > span {
+			padding: 0.7rem 0.5rem !important;
+		}
+	}
 	span {
 		background: rgba(241, 156, 6, 0.2);
 		display: inline-block;
@@ -30,9 +42,15 @@
 		line-height: 3rem;
 		&:not(:last-child) {
 			margin: 0rem -0.4rem 0rem 0rem;
+			@media (max-width: 550px) {
+				margin: 0rem -0.3rem 0rem 0rem;
+			}
 		}
 	}
 	.margin {
 		margin: 0rem 0.9rem 0rem 0rem !important;
+		@media (max-width: 550px) {
+			margin: 0rem 0.5rem 0rem 0rem !important;
+		}
 	}
 }
