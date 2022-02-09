@@ -12,6 +12,18 @@
 			grid-template: auto / 100%;
 		}
 	}
+	&__img {
+		@media (max-width: 1415px) {
+			width: 80%;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+		@media (max-width: $md4 + px) {
+			width: 100%;
+		}
+	}
 }
 
 .form-book {
@@ -26,8 +38,8 @@
 	}
 	input,
 	button {
-		height: 4rem;
 		font-size: 100%;
+		height: 4rem;
 		@media (max-width: 1600px) {
 			height: 3rem;
 		}

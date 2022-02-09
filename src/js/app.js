@@ -1,3 +1,5 @@
+"use strict";
+
 import * as flsFunctions from "./modules/function.js";
 flsFunctions.isWebp();
 
@@ -65,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.querySelector('.promo__video video').src = src;
 		});
 	});
+
+	// const documentLink = document.querySelectorAll('a');
+
+	// documentLink.forEach(link => {
+	// 	link.addEventListener('click', (event) => {
+	// 		event.preventDefault();
+	// 	});
+	// })
 
 });
 
