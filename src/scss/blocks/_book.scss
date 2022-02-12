@@ -56,8 +56,15 @@
 		color: #333;
 		text-transform: lowercase;
 		border: 2px solid #e7e3e3;
+		background: transparent;
 		&::placeholder {
 			color: #939393;
+		}
+		&[type="date"] {
+			color: #939393;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		&:focus {
 			box-shadow: 0 0 1rem 0 $mainColor;

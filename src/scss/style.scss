@@ -3,6 +3,8 @@
 @import "base/var";
 @import "base/ibg";
 
+@import "libs/swiper";
+
 @import "blocks/blocks";
 
 *::selection {
@@ -12,7 +14,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 8rem;
+	scroll-padding-top: 4rem;
 }
 
 body {
@@ -56,6 +58,9 @@ body {
 @import "blocks/book";
 @import "blocks/pakages";
 @import "blocks/services";
-
+@import "blocks/gallery";
+@import "blocks/review";
+@import "blocks/contact";
 @import "blocks/footer";
+
 @import "blocks/modal";

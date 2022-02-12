@@ -1,0 +1,104 @@
+.footer {
+	padding: 3rem 0rem 0rem 0rem;
+	background: #30302e;
+	color: $textColor;
+	&__row {
+		display: flex;
+		border-bottom: 2px solid #50504d;
+		padding: 0rem 0rem 2rem 0rem;
+		@media (max-width: 1100px) {
+			row-gap: 2rem;
+			flex-wrap: wrap;
+		}
+		@media (max-width: 650px) {
+			row-gap: 3rem;
+		}
+	}
+	&__item {
+		flex: 1 1 25%;
+		@media (max-width: 1100px) {
+			flex: 1 1 50%;
+		}
+		@media (max-width: 650px) {
+			flex: 1 1 100%;
+		}
+	}
+	&__title {
+		font-size: 2.5rem;
+		line-height: 2.9rem;
+		font-weight: 700;
+		text-transform: capitalize;
+		margin: 0rem 0rem 1rem 0rem;
+		&:not(:last-child) {
+			padding: 0rem 0.7rem 0rem 0rem;
+		}
+		@media (max-width: 1750px) {
+			font-size: 2rem;
+			line-height: 2.4rem;
+		}
+	}
+	&__text {
+		font-size: 1.3rem;
+		line-height: 1.7rem;
+		padding: 0rem 1.3rem 0rem 0rem;
+	}
+	&__list {
+		& > li {
+			font-size: 1.3rem;
+			&:not(:last-child) {
+				margin: 0rem 0rem 1.2rem 0rem;
+			}
+		}
+	}
+	&__link {
+		color: inherit;
+		font-size: inherit;
+		transition: all 0.4s ease;
+		@media (min-width: $md3 + px) {
+			&:hover {
+				color: $mainColor;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__copy {
+		text-align: center;
+		& > div {
+			font-size: 1.5rem;
+			line-height: 5rem;
+			text-transform: capitalize;
+			& > span {
+				color: $mainColor;
+			}
+		}
+		@media (max-width: $md3 + px) {
+			& > div {
+				font-size: 1.2rem;
+				line-height: 4rem;
+			}
+		}
+		@media (max-width: 540px) {
+			padding: 2rem 0rem;
+			& > div {
+				font-size: 1rem;
+				line-height: 1.5rem;
+			}
+		}
+	}
+	@media (max-width: $md4 + px) {
+		&__title {
+			font-size: 1.7rem;
+			line-height: 2.1rem;
+		}
+		&__text {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			padding: 0;
+		}
+		&__list {
+			& > li {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

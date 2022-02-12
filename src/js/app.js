@@ -3,6 +3,8 @@
 import * as flsFunctions from "./modules/function.js";
 flsFunctions.isWebp();
 
+import Swiper from 'swiper';
+
 document.addEventListener('DOMContentLoaded', () => {
 	const headerSearch = document.querySelector('.header__search'),
 		headerSearchIcon = document.querySelector('[data-icon="search"]'),
@@ -22,16 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		modal = document.querySelector('.modal');
 
 	headerUser.addEventListener('click', () => {
+		document.body.classList.toggle('_lock');
 		overlay.classList.toggle('_active');
 		modal.classList.toggle('_active');
 		headerBurger.classList.remove('_active');
 		headerMenu.classList.remove('_active');
 		headerSearchIcon.classList.remove('_none');
+		headerSearchClose.classList.remove('_active');
+		headerSearchBar.classList.remove('_active');
 	});
 
 	const closeModal = document.querySelector('[data-icon="close-modal"]');
 
 	closeModal.addEventListener('click', () => {
+		document.body.classList.remove('_lock');
 		overlay.classList.remove('_active');
 		modal.classList.remove('_active');
 	});
@@ -40,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerMenu = document.querySelector('.header__nav');
 
 	headerBurger.addEventListener('click', () => {
+		document.body.classList.toggle('_lock');
 		headerBurger.classList.toggle('_active');
 		headerMenu.classList.toggle('_active');
 		headerSearchBar.classList.remove('_active');
@@ -68,13 +75,58 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	// const documentLink = document.querySelectorAll('a');
+	window.addEventListener('scroll', () => {
+		headerSearchBar.classList.remove('_active');
+		headerSearchClose.classList.remove('_active');
+		headerSearchIcon.classList.remove('_none');
+	});
 
-	// documentLink.forEach(link => {
-	// 	link.addEventListener('click', (event) => {
-	// 		event.preventDefault();
-	// 	});
-	// })
+	var swiper = new Swiper(".mySwiper", {
+		spaceBetween: 20,
+		loop: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 1
+			},
+			768: {
+				slidesPerView: 2
+			},
+			1200: {
+				slidesPerView: 3
+			},
+		},
+	});
 
+	var swiper = new Swiper(".swiperBrands", {
+		spaceBetween: 20,
+		loop: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 5
+			},
+			850: {
+				slidesPerView: 4
+			},
+			580: {
+				slidesPerView: 3
+			},
+			400: {
+				slidesPerView: 2
+			}
+		},
+	});
 });
+
+
+
+
+
 

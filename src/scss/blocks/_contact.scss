@@ -1,0 +1,107 @@
+.contact {
+	padding: 2rem 0rem 3rem 0rem;
+	&__title {
+		margin: 0rem 0rem 2rem 0rem;
+		@media (max-width: 1400px) {
+			margin: 0;
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		@media (max-width: 1600px) {
+			padding: 0rem 0rem 3rem 0rem;
+		}
+		@media (max-width: 1400px) {
+			flex-direction: column;
+		}
+	}
+	&__img {
+		flex: 1 1 45%;
+		@media (max-width: 1400px) {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&__form {
+		padding: 2rem;
+		flex: 1 1 55%;
+		box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+		border-radius: 0.6rem;
+		@media (max-width: 550px) {
+			padding: 1rem;
+		}
+		& > div {
+			display: flex;
+			column-gap: 1rem;
+			input {
+				width: 50%;
+				height: 4rem;
+				padding: 0rem 0.8rem;
+				font-size: 1.3rem;
+				border: none;
+				background: #f9f6f7;
+				margin: 0rem 0rem 1.5rem 0rem;
+				&:focus {
+					box-shadow: 0 0 1rem 0 $mainColor;
+					border: none;
+				}
+			}
+		}
+		& > textarea {
+			resize: none;
+			width: 100%;
+			margin: 0rem 0rem 1.5rem 0rem;
+			height: 10rem;
+			padding: 0.8rem;
+			font-size: 1.3rem;
+			border: none;
+			background: #f9f6f7;
+			&:focus {
+				box-shadow: 0 0 1rem 0 $mainColor;
+				border: none;
+			}
+		}
+		& > button {
+			padding: 1rem 2.4rem;
+			font-size: 1.2rem;
+		}
+		@media (max-width: 1400px) {
+			width: 100%;
+		}
+		@media (max-width: 900px) {
+			& > div {
+				display: block;
+				input {
+					width: 100%;
+				}
+			}
+		}
+		@media (max-width: $md4 + px) {
+			& > div {
+				input {
+					height: 2.5rem;
+					font-size: 1rem;
+					margin: 0rem 0rem 1rem 0rem;
+					padding: 0rem 0.4rem;
+				}
+			}
+			textarea {
+				height: 6rem;
+				padding: 0.4rem;
+				font-size: 1rem;
+				margin: 0rem 0rem 1rem 0rem;
+			}
+			button {
+				padding: 0.5rem 1.8rem;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.swiper-slide {
+	text-align: center;
+}
