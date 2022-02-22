@@ -3,7 +3,13 @@
 import * as flsFunctions from "./modules/function.js";
 flsFunctions.isWebp();
 
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
+
+import AOS from 'aos';
+
+AOS.init({
+	disable: 'phone'
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 	const headerSearch = document.querySelector('.header__search'),
@@ -15,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerSearchBar.classList.toggle('_active');
 		headerSearchIcon.classList.toggle('_none');
 		headerSearchClose.classList.toggle('_active');
+		document.body.classList.remove('_lock');
 		headerBurger.classList.remove('_active');
 		headerMenu.classList.remove('_active');
 	});
@@ -81,12 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerSearchIcon.classList.remove('_none');
 	});
 
-	var swiper = new Swiper(".mySwiper", {
+	new Swiper(".mySwiper", {
 		spaceBetween: 20,
 		loop: true,
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true
 		},
 		breakpoints: {
 			640: {
@@ -101,12 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
-	var swiper = new Swiper(".swiperBrands", {
+	new Swiper(".swiperBrands", {
 		spaceBetween: 20,
 		loop: true,
 		autoplay: {
 			delay: 2000,
 			disableOnInteraction: false
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true
 		},
 		breakpoints: {
 			992: {
